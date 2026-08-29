@@ -1,0 +1,9 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        bq query --use_legacy_sql=false < sql/dim_customer.sql
+        bq query --use_legacy_sql=false < sql/dim_product.sql
+        bq query --use_legacy_sql=false < sql/fact_sales.sql
