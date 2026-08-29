@@ -7,3 +7,6 @@ steps:
         bq query --use_legacy_sql=false < sql/dim_customer.sql
         bq query --use_legacy_sql=false < sql/dim_product.sql
         bq query --use_legacy_sql=false < sql/fact_sales.sql
+
+options:
+  logging: CLOUD_LOGGING_ONLY
