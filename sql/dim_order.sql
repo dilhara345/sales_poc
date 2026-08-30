@@ -3,5 +3,5 @@ SELECT order_id,
 customer_name,
 product, 
 quantity,
-order_date 
+order_date,
 FROM ( SELECT DISTINCT order_id, customer_name, product, quantity, order_date FROM sales_poc.rawdata );
