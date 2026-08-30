@@ -4,8 +4,8 @@ c.customer_id,
 p.product_id, 
 o.order_date, 
 o.quantity, 
-o.unit_price, 
-ROUND(o.quantity * o.unit_price, 2) AS total_amount 
+p.unit_price, 
+ROUND(o.quantity * p.unit_price, 2) AS total_amount 
 FROM sales_poc.dim_order o 
 JOIN sales_poc.dim_customer c 
 ON o.customer_name = c.customer_name --AND o.email = c.email 
